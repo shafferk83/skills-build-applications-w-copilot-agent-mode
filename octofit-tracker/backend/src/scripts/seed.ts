@@ -77,7 +77,7 @@ async function seedDatabase() {
       },
     ]);
 
-    await Activity.insertMany([
+    const activities = await Activity.insertMany([
       {
         user: users[0]._id,
         team: teams[0]._id,
@@ -120,7 +120,7 @@ async function seedDatabase() {
       },
     ]);
 
-    await Leaderboard.insertMany([
+    const leaderboards = await Leaderboard.insertMany([
       {
         weekStartDate: new Date('2026-07-20T00:00:00.000Z'),
         team: teams[0]._id,
@@ -139,7 +139,7 @@ async function seedDatabase() {
       },
     ]);
 
-    await Workout.insertMany([
+    const workouts = await Workout.insertMany([
       {
         user: users[0]._id,
         title: 'Threshold Run Session',
@@ -183,6 +183,9 @@ async function seedDatabase() {
     ]);
 
     console.log('Database seeding complete');
+    console.log(
+      `Inserted users=${users.length}, teams=${teams.length}, activities=${activities.length}, leaderboard=${leaderboards.length}, workouts=${workouts.length}`,
+    );
     await mongoose.disconnect();
   } catch (error) {
     console.error('Error seeding database:', error);
