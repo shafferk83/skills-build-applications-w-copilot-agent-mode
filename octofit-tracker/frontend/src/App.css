@@ -1,0 +1,72 @@
+.app-shell {
+  padding: 24px;
+  text-align: left;
+}
+
+.app-header {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  border: 1px solid #d8dce5;
+  background: #f7f8fa;
+  color: #1f2a37;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-weight: 600;
+}
+
+.top-nav a.active {
+  background: #143d59;
+  border-color: #143d59;
+  color: #fff;
+}
+
+.subtle {
+  color: #4c5d73;
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.warning {
+  color: #8a4b00;
+}
+
+.content-shell {
+  border-top: 1px solid #e5e7ec;
+  padding-top: 18px;
+}
+
+.page-shell h2 {
+  margin: 0 0 6px;
+}
+
+.entity-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.entity-card {
+  background: #f8fbff;
+  border: 1px solid #dce8f3;
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.error-text {
+  color: #bf1f2f;
+}
